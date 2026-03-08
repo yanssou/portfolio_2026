@@ -48,38 +48,63 @@ const AppShowcase = () => {
       <div className="w-full">
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
-            </div>
+            <a
+              href="https://creascape.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="image-wrapper block hover:opacity-90 transition-opacity"
+            >
+              <img src="/images/creascape.png" alt="CreaScape - Le partenaire digital des paysagistes" />
+            </a>
             <div className="text-content">
-              <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
-              </h2>
+              <a
+                href="https://creascape.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <h2 className="underline underline-offset-4">
+                  CreaScape — Le partenaire digital des paysagistes
+                </h2>
+              </a>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                Outil web conçu pour les professionnels du paysage : concevoir, chiffrer et présenter des massifs de vivaces en quelques clics. Calcul automatique des végétaux, du terreau et du temps de pose, avec génération de fiches PDF illustrées pour vos devis.
               </p>
             </div>
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
+            <a
+              href="https://zenly-one.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project block group"
+              ref={libraryRef}
+            >
+              <div className="image-wrapper bg-[#FFEFDB] transition-opacity duration-300 group-hover:opacity-90">
                 <img
-                  src="/images/project2.png"
-                  alt="Library Management Platform"
+                  src="/images/zenly.png"
+                  alt="Zentry - Redefine Gaming"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
-            </div>
+              <h2 className="underline underline-offset-4">Zentry — Redefine Gaming</h2>
+            </a>
 
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+            <a
+              href="https://callmerobyn.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project block group"
+              ref={ycDirectoryRef}
+            >
+              <div className="image-wrapper bg-[#FFE7EB] transition-opacity duration-300 group-hover:opacity-90">
+                <img
+                  src="/images/callmerobyn.png"
+                  alt="Call Me Robyn - Escape games personnalisés"
+                />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
-            </div>
+              <h2 className="underline underline-offset-4">Call Me Robyn — Escape games personnalisés</h2>
+            </a>
           </div>
         </div>
       </div>

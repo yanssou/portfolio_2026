@@ -1,9 +1,21 @@
-import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
+import { Center, Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
 import * as THREE from "three";
 
 const TechIconCardExperience = ({ model }) => {
+  if (model.useImage && model.imgPath) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <img
+          src={model.imgPath}
+          alt={model.name}
+          className="max-w-[80px] max-h-[80px] object-contain"
+        />
+      </div>
+    );
+  }
+
   const scene = useGLTF(model.modelPath);
 
   useEffect(() => {
@@ -48,9 +60,15 @@ const TechIconCardExperience = ({ model }) => {
         that make up the 3D model.
       */}
       <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
-        <group scale={model.scale} rotation={model.rotation}>
-          <primitive object={scene.scene} />
-        </group>
+        <Center disableX disableZ={!model.position}>
+          <group
+            scale={model.scale}
+            rotation={model.rotation}
+            position={model.position || [0, 0, 0]}
+          >
+            <primitive object={scene.scene} />
+          </group>
+        </Center>
       </Float>
 
       <OrbitControls enableZoom={false} />

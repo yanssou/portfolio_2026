@@ -7,16 +7,25 @@ const Testimonials = () => {
     <section id="testimonials" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="What People Say About Me?"
-          sub="⭐️ Customer feedback highlights"
+          title="Ce que les gens disent de moi"
+          sub="⭐️ Avis clients"
         />
 
-        <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
           {testimonials.map((testimonial, index) => (
             <GlowCard card={testimonial} key={index} index={index}>
               <div className="flex items-center gap-3">
                 <div>
-                  <img src={testimonial.imgPath} alt="" />
+                  {testimonial.initials ? (
+                    <div
+                      className="flex items-center justify-center size-14 rounded-full font-semibold text-lg shrink-0 text-[#b76e79]"
+                      style={{ backgroundColor: "#fadadd" }}
+                    >
+                      {testimonial.initials}
+                    </div>
+                  ) : (
+                    <img src={testimonial.imgPath} alt="" />
+                  )}
                 </div>
                 <div>
                   <p className="font-bold">{testimonial.name}</p>
