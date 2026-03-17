@@ -122,20 +122,21 @@ const techStackIcons = [
   {
     name: "Développeur Java",
     modelPath: "/models/java-transformed.glb",
-    scale: 1,
+    scale: 1.4,
     rotation: [0, 0, 0],
   },
   {
-    name: "Utilisation de la 3D",
+    name: "Développement Web 3D",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
-    name: "Développeur Collaboratif",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
+    name: "Optimisation Performance & SEO",
+    modelPath: "/models/rocket.glb",
+    scale: 1.2,
     rotation: [0, -Math.PI / 4, 0],
+    position: [0, -4, 0],
   },
   {
     name: "Développeur WordPress",
