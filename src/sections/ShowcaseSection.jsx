@@ -49,7 +49,7 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <a
-              href="https://creascape.vercel.app"
+              href="https://creascape.fr"
               target="_blank"
               rel="noopener noreferrer"
               className="image-wrapper block hover:opacity-90 transition-opacity"
@@ -58,7 +58,7 @@ const AppShowcase = () => {
             </a>
             <div className="text-content">
               <a
-                href="https://creascape.vercel.app"
+                href="https://creascape.fr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
