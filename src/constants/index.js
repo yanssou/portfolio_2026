@@ -136,7 +136,7 @@ const techStackIcons = [
     modelPath: "/models/rocket.glb",
     scale: 1.2,
     rotation: [0, -Math.PI / 4, 0],
-    position: [0, -4, 0],
+    position: [0, -3.5, 0],
   },
   {
     name: "Développeur WordPress",
