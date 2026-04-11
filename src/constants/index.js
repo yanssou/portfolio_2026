@@ -220,24 +220,26 @@ const testimonials = [
       "Travailler avec Yanis a été une expérience fantastique. Il a transformé notre site obsolète en une plateforme moderne et conviviale. Son attention aux détails et son engagement envers la qualité sont inégalés. Je le recommande vivement pour tout projet de développement web.",
     initials: "ED",
   },
+  {
+    name: "Amplisia",
+    mentions: "@amplisia",
+    review:
+      "Un grand merci pour ton implication sur le projet Créascape ! Tu as su dompter ces fameux fichiers Excel pour en faire un outil fluide et intuitif. On est ravis du résultat. Je recommande vivement ton expertise à quiconque cherche un dev capable de simplifier le complexe !",
+    initials: "AP",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7439641567663009793?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7439641567663009793%2C7440393602695905280%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287440393602695905280%2Curn%3Ali%3Aactivity%3A7439641567663009793%29"
+  },
 ];
 
 const socialImgs = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "github",
+    imgPath: "/images/github.png",
+    link: "https://github.com/yanis-ikhenoussene",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    link: "https://www.linkedin.com/in/yanis-ikhenoussene-1aa404230/",
   },
 ];
 
