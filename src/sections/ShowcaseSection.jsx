@@ -11,6 +11,7 @@ const AppShowcase = () => {
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
   const tcgShopRef = useRef(null);
+  const coachRef = useRef(null);
 
   useGSAP(() => {
     // Animation for the main section
@@ -26,6 +27,7 @@ const AppShowcase = () => {
       libraryRef.current,
       ycDirectoryRef.current,
       tcgShopRef.current,
+      coachRef.current,
     ];
 
     cards.forEach((card, index) => {
@@ -126,6 +128,22 @@ const AppShowcase = () => {
                 />
               </div>
               <h2 className="underline underline-offset-4">Le Repaire du Dresseur — Boutique TCG (démo)</h2>
+            </a>
+
+            <a
+              href="https://temporary-swift-citrine-rswzoqq.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project block group"
+              ref={coachRef}
+            >
+              <div className="image-wrapper bg-[#0a0a0a] transition-opacity duration-300 group-hover:opacity-90">
+                <img
+                  src="/images/coach-musculation.png"
+                  alt="Karim Boudiaf Coaching - Coach sportif musculation"
+                />
+              </div>
+              <h2 className="underline underline-offset-4">Karim Boudiaf Coaching — Coach sportif (démo)</h2>
             </a>
           </div>
         </div>
