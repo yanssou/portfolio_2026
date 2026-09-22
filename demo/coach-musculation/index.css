@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
+}
+
+.font-display {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.card-border {
+  border: 1px solid var(--color-border);
+}
+
+.card-border:hover {
+  border-color: var(--color-primary);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--color-text);
+}
+
+/* Angular "tactical badge" cut corners — replaces rounded-full pills used
+   everywhere on the TCG shop demo, to give this site its own visual identity. */
+.btn-brute {
+  clip-path: polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  );
+}
+
+.badge-brute {
+  clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 8px);
+}
+
+.diagonal-split {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+}
+

@@ -17,6 +17,10 @@ export const theme = {
   border: "#2a2a3d",
 };
 
+// ⚠️ phoneDisplay/phoneHref/whatsappHref utilisent volontairement un numéro
+// invalide (des "X" à la place de vrais chiffres) : un vrai numéro français,
+// même inventé au hasard, peut être attribué à quelqu'un. Ne le remplace
+// que par le vrai numéro du commerce juste avant de montrer la démo.
 export const shop = {
   name: "Le Repaire du Dresseur",
   initials: "RD",
@@ -25,10 +29,10 @@ export const shop = {
   mapsUrl: "https://maps.google.com/?q=12+rue+des+Arènes+69003+Lyon",
   mapEmbedBbox: "4.8450,45.7500,4.8650,45.7600",
   mapEmbedMarker: "45.7550,4.8550",
-  phoneDisplay: "06 12 34 56 78",
-  phoneHref: "tel:+33612345678",
+  phoneDisplay: "06 XX XX XX XX",
+  phoneHref: "tel:+336XXXXXXXX",
   whatsappHref:
-    "https://wa.me/33612345678?text=Bonjour%2C%20je%20viens%20du%20site%20et%20j'ai%20une%20question%20!",
+    "https://wa.me/336XXXXXXXX?text=Bonjour%2C%20je%20viens%20du%20site%20et%20j'ai%20une%20question%20!",
   email: "contact@lerepairedudresseur.fr",
   instagram: "#",
   facebook: "#",

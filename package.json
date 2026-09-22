@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "dev:demo:tcg-shop": "vite --config demo/tcg-shop/vite.config.js",
-    "build:demo:tcg-shop": "vite build --config demo/tcg-shop/vite.config.js"
+    "build:demo:tcg-shop": "vite build --config demo/tcg-shop/vite.config.js",
+    "dev:demo:coach-musculation": "vite --config demo/coach-musculation/vite.config.js",
+    "build:demo:coach-musculation": "vite build --config demo/coach-musculation/vite.config.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
