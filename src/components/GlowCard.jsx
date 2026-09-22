@@ -30,7 +30,7 @@ const GlowCard = ({ card, index, children }) => {
     <div
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
-      className="card card-border timeline-card rounded-xl p-10 h-full flex flex-col relative"
+      className="card card-border timeline-card rounded-xl p-6 md:p-10 h-full flex flex-col relative"
     >
       {card.link && (
         <a
@@ -64,7 +64,7 @@ const GlowCard = ({ card, index, children }) => {
         ))}
       </div>
       <div className="mb-5 flex-1 flex flex-col">
-        <p className="text-white-50 text-lg flex-1">{card.review}</p>
+        <p className="text-white-50 text-base md:text-lg flex-1">{card.review}</p>
       </div>
       {children}
     </div>
