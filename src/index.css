@@ -152,6 +152,46 @@ section {
         }
       }
     }
+
+    .menu-toggle {
+      @apply flex flex-col justify-center items-center gap-1.5 size-10 shrink-0 cursor-pointer;
+
+      .menu-toggle-bar {
+        @apply block w-6 h-0.5 bg-white-50 rounded-full transition-all duration-300;
+
+        &:nth-child(1).open {
+          @apply translate-y-2 rotate-45;
+        }
+
+        &:nth-child(2).open {
+          @apply opacity-0;
+        }
+
+        &:nth-child(3).open {
+          @apply -translate-y-2 -rotate-45;
+        }
+      }
+    }
+
+    nav.mobile {
+      @apply lg:hidden grid grid-rows-[0fr] transition-all duration-300 ease-in-out overflow-hidden;
+
+      &.open {
+        @apply grid-rows-[1fr] mt-5;
+      }
+
+      ul {
+        @apply min-h-0 flex flex-col gap-1 overflow-hidden border-t border-white/10 pt-5;
+
+        li a {
+          @apply block text-white-50 text-lg py-3 transition-colors duration-300 hover:text-white;
+        }
+
+        .mobile-contact-btn {
+          @apply inline-block mt-2 px-5 py-2 rounded-lg bg-white text-black font-medium;
+        }
+      }
+    }
   }
 
   .app-showcase {
@@ -186,7 +226,7 @@ section {
     }
 
     .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+      @apply flex flex-col gap-10 xl:w-[40%];
 
       .image-wrapper {
         @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
@@ -221,12 +261,20 @@ section {
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
+      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
         @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
       }
+    }
+
+    &.submit-btn .arrow-wrapper img {
+      @apply xl:translate-y-0 animate-none transition-transform duration-300 group-hover:translate-x-1;
+    }
+
+    &.hero-btn .text {
+      @apply max-md:translate-x-0 max-md:group-hover:translate-x-0;
     }
   }
 

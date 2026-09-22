@@ -27,10 +27,10 @@ const Button = ({ text, className, id }) => {
       }}
       className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
     >
-      <div className="cta-button group">
+      <div className="cta-button hero-btn group">
         <div className="bg-circle" />
         <p className="text">{text}</p>
-        <div className="arrow-wrapper">
+        <div className="arrow-wrapper max-md:hidden">
           <img src="/images/arrow-down.svg" alt="arrow" />
         </div>
       </div>

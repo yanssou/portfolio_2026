@@ -12,13 +12,20 @@ const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas
+      camera={{ position: [0, 0, 15], fov: 45 }}
+      // react-three-fiber sets touch-action: none on the canvas by default,
+      // which blocks finger-scroll on mobile even with OrbitControls disabled.
+      // pan-y lets vertical scroll gestures pass through to the page.
+      style={{ touchAction: "pan-y" }}
+    >
       {/* deep blue ambient */}
       <ambientLight intensity={0.2} color="#1a1a40" />
-      {/* Configure OrbitControls to disable panning and control zoom based on device type */}
+      {/* Configure OrbitControls to disable panning and control zoom/rotation based on device type */}
       <OrbitControls
         enablePan={false} // Prevents panning of the scene
         enableZoom={!isTablet} // Disables zoom on tablets
+        enableRotate={!isTablet} // Disables touch-drag rotation on tablets/mobile so the page can scroll instead
         maxDistance={20} // Maximum distance for zooming out
         minDistance={5} // Minimum distance for zooming in
         minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation

@@ -10,6 +10,7 @@ const AppShowcase = () => {
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
+  const tcgShopRef = useRef(null);
 
   useGSAP(() => {
     // Animation for the main section
@@ -20,7 +21,12 @@ const AppShowcase = () => {
     );
 
     // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
+    const cards = [
+      rydeRef.current,
+      libraryRef.current,
+      ycDirectoryRef.current,
+      tcgShopRef.current,
+    ];
 
     cards.forEach((card, index) => {
       gsap.fromTo(
@@ -104,6 +110,22 @@ const AppShowcase = () => {
                 />
               </div>
               <h2 className="underline underline-offset-4">Call Me Robyn — Escape games personnalisés</h2>
+            </a>
+
+            <a
+              href="https://temporary-speedy-beryl-xfdy2iz.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project block group"
+              ref={tcgShopRef}
+            >
+              <div className="image-wrapper bg-[#0c0c14] transition-opacity duration-300 group-hover:opacity-90">
+                <img
+                  src="/images/tcg-shop.png"
+                  alt="Le Repaire du Dresseur - Boutique de cartes à collectionner"
+                />
+              </div>
+              <h2 className="underline underline-offset-4">Le Repaire du Dresseur — Boutique TCG (démo)</h2>
             </a>
           </div>
         </div>

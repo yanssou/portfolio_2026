@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:demo:tcg-shop": "vite --config demo/tcg-shop/vite.config.js",
+    "build:demo:tcg-shop": "vite build --config demo/tcg-shop/vite.config.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -21,6 +23,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-responsive": "^10.0.1",
+    "react-router-dom": "^7.18.4",
     "tailwindcss": "^4.0.14",
     "three": "^0.174.0"
   },

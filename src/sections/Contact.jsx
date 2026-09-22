@@ -126,13 +126,13 @@ const Contact = () => {
                 )}
 
                 <button type="submit">
-                  <div className="cta-button group">
+                  <div className="cta-button submit-btn group">
                     <div className="bg-circle" />
                     <p className="text">
                       {loading ? "Envoi en cours..." : "Envoyer le message"}
                     </p>
                     <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
+                      <img src="/images/arrow-right.svg" alt="arrow" />
                     </div>
                   </div>
                 </button>
